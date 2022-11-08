@@ -1,3 +1,28 @@
 1. Check whether the given string is a palindrome or not?
+
 2. Print the table of 2 by using recursion.
+
 3. Print duplicates from given array.
+public class C1 {
+	public static void main(String... args) {
+		int[] arr1 = { 1, 2, 3, 4, 5, 33, 33, 4 };
+		int[] arr2 = new int[arr1.length];
+		int k = 0;
+		boolean dup = false;
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr2.length; j++) {
+				if (arr1[i] == arr2[j]) {
+					dup = true;
+					break;
+				}
+			}
+			if (!dup) {
+				arr2[k++] = arr1[i];
+				dup = false;
+			} else {
+				System.out.println(arr1[i]);
+			}
+		}
+	}
+}
+
