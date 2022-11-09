@@ -105,3 +105,9 @@ public class C1 {
 		System.out.println(Arrays.toString(Arrays.copyOf(arr2, k)));
 	}
 }
+
+8. Sql query to find 3rd larget number
+select num 
+from (select num from table1 order by num desc limit 3)
+order by num asc
+limit 1
