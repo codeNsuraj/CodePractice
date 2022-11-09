@@ -62,3 +62,19 @@ public class C1 {
 }
 
 6. Fibonnacci series.
+public class C1 {
+	public static void main(String... args) {
+		int f = 0;
+		int s = 1;
+		int temp = 0;
+
+		System.out.println(f);
+		System.out.println(s);
+		while (10 >= f + s) {
+			temp = f;
+			f = s;
+			s = f + temp;
+			System.out.println(s);
+		}
+	}
+}
